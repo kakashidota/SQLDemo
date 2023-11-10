@@ -1,0 +1,72 @@
+﻿<Window x:Class="SQLDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SQLDemo"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+    
+        <ListBox Grid.Column="1" 
+                 Grid.Row="1" 
+                 Width="200" 
+                 Height="400" 
+                 Grid.RowSpan="6" 
+                 x:Name="StudentListBox" 
+                 DisplayMemberPath="Name"
+                 />
+        <TextBox Grid.Column="2" 
+                 Grid.ColumnSpan="2" 
+                 Grid.Row="1"
+                 Grid.RowSpan="3"
+                 Width="250"
+                 x:Name="StudentNameTextBox"
+                 />
+        <Button Grid.Column="2" 
+                Grid.Row="4"
+                Content="Add"
+                x:Name="AddStudentBtn" Click="AddStudentBtn_Click"
+                />
+        <Button Grid.Column="3"
+                Grid.Row="4"
+                Content="Delete"
+                x:Name="DeleteStudentBtn" Click="DeleteStudentBtn_Click"
+                />
+        <Button Grid.Column="2" 
+                Grid.Row="5" 
+                Grid.ColumnSpan="2"
+                Content="Update student"
+                x:Name="UpdateBtn" Click="UpdateBtn_Click"
+                />
+
+
+
+    </Grid>
+
+
+
+</Window>
